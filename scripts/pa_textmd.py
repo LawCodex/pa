@@ -142,6 +142,10 @@ def is_caps(s):
     return len(letters) >= 3 and sum(c.isupper() for c in letters) / len(letters) > 0.85
 
 
+# a caption (sumilla) does not end with a function word; a wrapped sentence often does
+STOPWORDS = {"de", "del", "la", "el", "los", "las", "y", "e", "o", "u", "en", "a", "al", "que", "por", "con", "para",
+             "se", "su", "sus", "un", "una", "lo", "como", "sin", "sobre", "entre", "cuando", "no", "es", "son", "ser"}
+
 RANK = {"PARTE": 1, "LIBRO": 2, "SECCION": 3, "TITULO": 4, "SUBTITULO": 4.5, "CAPITULO": 5,
         "SUBCAPITULO": 6, "SUBSECCION": 6.5}
 
@@ -290,6 +294,7 @@ def lines_to_md(pages_lines, article_word="Artículo"):
                 last_num[0] = int(num)
             nxt_line = lines[i + 1].strip() if i + 1 < n else ""
             if rest and len(rest) < 90 and not rest.endswith((".", ":", ";", ",")) and not re.search(r"[.:;]\s+\S", rest) \
+                    and rest.split()[-1].lower() not in STOPWORDS \
                     and nxt_line[:1].isupper() and not RE_ART.match(nxt_line) and not RE_DIV.match(nxt_line):
                 b.article(f"{article_word} {num}. {rest}", "")
             else:
