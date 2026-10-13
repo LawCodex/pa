@@ -9,13 +9,13 @@ Part of [LawCodex](https://github.com/LawCodex): one public repository per juris
 
 Retrieved: **2026-10-13**. Language: Spanish (`es`).
 
-Status: **partial — laws mostly from the 1970s onward (texts available as text); no current Constitution**
+Status: **partial — laws mostly from the 1970s onward (texts available as text); Constitution in force from an Asamblea edition**
 
 ## What is covered
 
 | Category (Legispan type) | Directory | Files |
 |---|---|---|
-| Constitución Política — historical texts of 1941 and 1946 (the 1904, 1972 and 1983 texts are scanned) | `constitucion/` | 2 |
+| Constitución Política in force (1972, reformed 1978–2004; texto único 2004) and historical texts of 1941 and 1946 | `constitucion/` | 3 |
 | Actos legislativos (constitutional amendments) | `actos-legislativos/` | 2 |
 | Leyes | `leyes/<year>/` | 2,832 |
 | Textos únicos | `textos-unicos/<year>/` | 27 |
@@ -38,8 +38,9 @@ consolidated versions; the *textos únicos* are the official consolidations orde
 
 - The official Gaceta Oficial website (gacetaoficial.gob.pa) is behind an Incapsula bot
   challenge; not used.
-- **The Constitution in force** (1972, as reformed in 1978, 1983, 1994 and 2004; texto único
-  published in Gaceta Oficial 25176 of 15 Nov 2004): Legispan has no text layer for it.
+- Legispan has no text layer for the 1972 Constitution and its texto único; the Constitution in
+  force is taken from the Asamblea Nacional's edition (adjusted to all reforms up to 2004, after
+  the Texto Único of G.O. 25176) published as a PDF on www.sinaproc.gob.pa (a government site).
 - Scanned norms (no OCR), other norm types (resoluciones, acuerdos, contratos…).
 
 ## Source
